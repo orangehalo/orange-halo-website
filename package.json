@@ -1,0 +1,16 @@
+{
+  "name": "@orange-halo/website",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@orange-halo/components": "^1.0.0",
+    "@orange-halo/tokens": "^1.0.0",
+    "astro": "^4.16.0"
+  }
+}

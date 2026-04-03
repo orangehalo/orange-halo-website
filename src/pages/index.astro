@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home">
+  <h1 class="oh-visually-hidden">Orange Halo</h1>
+<main>
+  <oh-container size="lg">
+    <div class="oh-section">
+      <!-- Row 1: Text | Image -->
+      <oh-grid columns="2" gap="lg" align-items="center" class="oh-content-row">
+        <p class="oh-lead">
+          Orange Halo is my design alter ego. It's a space to explore personal projects, experiments, and ideas. But it didn't start that way...
+        </p>
+        <img src="/images/portrait.svg" alt="" class="oh-content-image oh-content-image--contain" />
+      </oh-grid>
+
+      <!-- Row 2: Text | Image (image visually first on desktop) -->
+      <oh-grid columns="2" gap="lg" align-items="center" class="oh-content-row">
+        <p class="oh-lead">
+          Initially, Orange Halo existed as my freelance studio, starting up in the summer of 2011 and operating for just over a decade. Rather than retire the name, I've decided to adapt it.
+        </p>
+        <img src="/images/orange.svg" alt="" class="oh-content-image oh-content-image--contain oh-content-image--order-first" />
+      </oh-grid>
+
+      <!-- Row 3: Text | Image -->
+      <oh-grid columns="2" gap="lg" align-items="center" class="oh-content-row">
+        <p class="oh-lead">
+          Orange Halo is a reference to a time when I first decided to pursue design while studying abroad in California. The name borrows from the area, Orange County, and from the nickname of the local baseball team.
+        </p>
+        <img src="/images/big-a.svg" alt="" class="oh-content-image oh-content-image--contain" />
+      </oh-grid>
+    </div>
+  </oh-container>
+  </main>
+</BaseLayout>

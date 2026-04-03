@@ -1,0 +1,68 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Orange Halo - a space for experiments, ideas, and design-led side projects' } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} | Orange Halo</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // Load Web Components client-side
+      import '@orange-halo/components';
+    </script>
+  </head>
+  <body>
+    <oh-skip-link href="#main-content">Skip to main content</oh-skip-link>
+    
+    <oh-navbar drawer-heading="Navigation">
+      <a slot="logo" href="/">
+        <img src="/logo.svg" alt="Orange Halo - Home" style="height: 40px;" />
+      </a>
+      <!-- Desktop links -->
+      <oh-link href="/">Home</oh-link>
+      <oh-link href="/projects">Projects</oh-link>
+      <oh-link href="/archive/">Archive</oh-link>
+      <!-- Mobile drawer links -->
+      <oh-link slot="mobile" href="/">Home</oh-link>
+      <oh-link slot="mobile" href="/projects">Projects</oh-link>
+      <oh-link slot="mobile" href="/archive/">Archive</oh-link>
+    </oh-navbar>
+
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <oh-footer copyright="© 2026 Orange Halo">
+      <img slot="logo" src="/logo.svg" alt="Orange Halo" style="height: 32px; filter: brightness(0) invert(1);" />
+      
+      <oh-icon slot="social" name="github" href="https://github.com/orangehalo" target="_blank" label="GitHub (opens in new tab)" size="lg" inverse></oh-icon>
+      <oh-icon slot="social" name="linkedin" href="https://www.linkedin.com/in/fraserhood/" target="_blank" label="LinkedIn (opens in new tab)" size="lg" inverse></oh-icon>
+      <oh-icon slot="social" name="substack" href="https://substack.com/@fraserhood" target="_blank" label="Substack (opens in new tab)" size="lg" inverse></oh-icon>
+      <oh-icon slot="social" name="email" href="mailto:fraser@orangehalo.co.uk" label="Email" size="lg" inverse></oh-icon>
+      
+      <oh-stack gap="sm">
+        <h2 class="oh-footer-heading">Explore</h2>
+        <oh-link href="/projects" inverse>Projects</oh-link>
+        <oh-link href="/archive/" inverse>Archive</oh-link>
+      </oh-stack>
+    </oh-footer>
+  </body>
+</html>
+
+<style>
+  main {
+    min-height: calc(100vh - 200px);
+  }
+</style>

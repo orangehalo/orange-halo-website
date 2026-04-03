@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Design System" description="The Orange Halo design system — tokens, components, and principles for warm, accessible interfaces.">
+  <oh-hero
+    heading="Design System"
+    subtitle="A living collection of tokens, components, and patterns built with warmth and accessibility at their core."
+    size="md"
+  ></oh-hero>
+
+  <main><oh-container size="md">
+    <oh-stack gap="xl" class="oh-section">
+      <section>
+      <img 
+          src="/images/design-sys-proj.jpg" 
+          alt="OHDS storybook" 
+          class="oh-project-image"
+        />
+        <p class="oh-body-lg">
+        Working on the OHDS was a very real lesson in what AI is good at, and where it absolutely needs human supervision. The goal from the start wasn’t to build yet another neutral SaaS component library, but something with warmth, personality, and a point of view. That meant setting clear design rules early on — things like favouring warmth over neutrality and crafted details over generic polish — to stop the output drifting into something bland and interchangeable.
+        </p>
+        <p class="oh-body-lg">
+        AI made it incredibly fast to scaffold the system. Components, tokens, templates, documentation, all of that came together at a pace that would’ve been hard to match manually. But speed came with a cost. Accessibility, colour consistency, and semantic correctness were constant pressure points. Time and again, things that looked fine at a glance failed contrast requirements, skipped heading levels, or relied on colour alone to convey meaning. Catching and correcting those issues required deliberate human judgment, not just automated checks.
+        <p/>
+        <p class="oh-body-lg">
+        One of the biggest surprises was how often refactors introduced regressions. Accessible focus states would disappear during visual tweaks. Colours that had been carefully chosen for contrast would quietly get replaced with slightly nicer-looking — but failing — alternatives. Even build issues cropped up where changes looked correct in code but weren’t actually making it to the browser because of caching or bundling quirks. The takeaway was simple: never trust a change until you’ve verified it in a real environment.
+        <p/>
+        <p class="oh-body-lg">
+        Over time, the process became more structured. Accessibility decisions were documented along with the reason they were made, not just the outcome. A running list of accessibility lessons helped avoid repeating the same mistakes. And before any refactor, there was a mental checklist: contrast, focus, semantics, keyboard access. AI was still doing the heavy lifting, but the human role shifted toward steering, reviewing, and sanity-checking rather than just prompting and accepting output.
+        </p>
+        <p class="oh-body-lg">
+        By the end of the project, the biggest lesson was clear: AI is an accelerator, not an authority. It’s brilliant at generating, iterating, and filling in the gaps, but it doesn’t replace taste, judgment, or responsibility. The OHDS exists because of that collaboration: AI providing momentum, and human oversight ensuring quality, accessibility, and intent weren’t lost along the way.
+        </p>
+            <oh-stack gap="xl" class="oh-section">
+        <oh-button variant="primary" href="https://www.orangehalo.co.uk/ohds">
+          View Storybook
+          <oh-icon slot="icon-right" name="arrow-right" size="sm"></oh-icon>
+        </oh-button>
+      </section>
+
+    </oh-stack>
+  </oh-container>
+  </main>
+</BaseLayout>

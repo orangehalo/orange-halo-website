@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Spinyl Track" description="Spinyl Track — a personal project from Orange Halo.">
+  <oh-hero
+    heading="Spinyl Track"
+    subtitle="Project details coming soon."
+    size="md"
+  ></oh-hero>
+<main>
+  <oh-container size="md">
+    <section class="oh-section">
+      <img 
+          src="/images/spinyl-track-proj.jpg" 
+          alt="Spinyl Track iOS screens" 
+          class="oh-project-image"
+        />
+
+      <p class="oh-body-lg">
+        Read more about <oh-link href="https://fraserhood.substack.com/p/what-i-learned-building-a-small-app" target="_blank">Spinyl Track on Substack</oh-link>.
+      </p>
+
+      <p class="oh-body-lg">
+        Building Spinyl Track started as a simple idea: I wanted an easy way to keep track of the vinyl I was actually listening to, not just what I owned. I decided to use Cursor to see how far I could get treating it like a development partner rather than a tool. Instead of diving straight into architecture or boilerplate, I focused on describing what I wanted the app to do and how it should feel, then iterated from there.
+      </p>
+      <p class="oh-body-lg">
+        Using Cursor felt surprisingly natural. I’d explain a feature in plain language — like logging a record after scanning a barcode — and it would help generate the SwiftUI views, models, and networking code to get me moving quickly. From there, I could tweak things, ask it to simplify or restructure parts of the code, or explore alternative approaches. It made building the app feel more like a conversation than a rigid build process, which kept things fun and low-pressure.
+      </p>
+      <p class="oh-body-lg">
+        Once the basics were in place, I started running Spinyl Track on my own phone. That’s where things really clicked. Features like barcode scanning only make sense on a real device, and testing it in everyday situations helped uncover all the small details you don’t notice in a simulator — camera permissions, scan reliability, and how readable everything felt in different lighting. Seeing the app behave like something I’d actually use was hugely motivating.
+      </p>
+      <p class="oh-body-lg">
+        Testing on my phone also helped shape the structure of the app. I paid attention to how quickly I could log a listen, whether the Artists and Albums views reflected my habits in a meaningful way, and where the UI felt like it was asking too much of the user. Because Cursor made iteration fast, it was easy to rename things, remove friction, or rethink parts of the flow without feeling stuck.
+      </p>
+      <p class="oh-body-lg">
+        Overall, building Spinyl Track with Cursor was less about “writing perfect code” and more about getting something real into my hands quickly. Being able to test it on my own device closed the loop — turning an idea into a working app I could carry around with me. It’s a workflow I’ll definitely come back to for future side projects.
+      </p>
+    </section>
+  </oh-container>
+  </main>
+</BaseLayout>

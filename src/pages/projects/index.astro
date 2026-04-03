@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Projects" description="Personal projects, experiments, and ideas from Orange Halo.">
+  <oh-hero
+    heading="Projects"
+    subtitle="A collection of personal projects, experiments, and ideas."
+    size="md"
+  ></oh-hero>
+<main>
+  <oh-container size="md">
+    <div class="oh-section">
+      <article>
+        <h2 class="oh-section-heading">Orange Halo Design System</h2>
+        <img 
+          src="/images/design-system.jpg" 
+          alt="Orange Halo Design System preview" 
+          class="oh-project-image"
+        />
+        <p class="oh-body-lg">
+          OHDS is an AI-built design system created as an experiment, focused on pushing personality beyond standard SaaS design systems.
+        </p>
+        <oh-button variant="primary" href="/projects/design-system">
+          View OHDS
+          <oh-icon slot="icon-right" name="arrow-right" size="sm"></oh-icon>
+        </oh-button>
+      </article>
+
+      <article>
+        <h2 class="oh-section-heading">Spinyl Track</h2>
+        <img 
+          src="/images/spinyl-track.jpg" 
+          alt="Spinyl Track preview" 
+          class="oh-project-image"
+        />
+        <p class="oh-body-lg">
+          Spinyl Track makes it effortless to log every record you play — uncover your listening habits and rediscover the music you love.
+        </p>
+        <oh-button variant="primary" href="/projects/spinyl-track">
+          View Spinyl Track
+          <oh-icon slot="icon-right" name="arrow-right" size="sm"></oh-icon>
+        </oh-button>
+      </article>
+    </div>
+  </oh-container>
+  </main>
+</BaseLayout>
