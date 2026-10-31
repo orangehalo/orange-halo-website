@@ -11,7 +11,7 @@
 html {
   font-family: var(--oh-font-family-sans, system-ui, -apple-system, sans-serif);
   font-size: var(--oh-font-size-base, 16px);
-  line-height: var(--oh-line-height-normal, 1.5);
+  line-height: var(--oh-typography-body-base-line-height);
   color: var(--oh-color-text-primary, #1a1a1a);
   background-color: var(--oh-color-surface-base, #FAF7F2);
   -webkit-font-smoothing: antialiased;
@@ -37,8 +37,8 @@ body {
 
 /* Focus visible styles */
 :focus-visible {
-  outline: 2px solid var(--oh-color-border-focus, #C54300);
-  outline-offset: 2px;
+  outline: 2px solid var(--oh-focus-ring-color);
+  outline-offset: var(--oh-focus-ring-offset);
 }
 
 /* Selection styles */

@@ -1,0 +1,9 @@
+# Deploy settings for the ftp-deploy skill. Astro copies this into dist/;
+# run ftp-deploy from dist/. No secrets here.
+PROFILE=orange-halo
+REMOTE_FOLDER=
+FILES="index.html favicon.svg logo.svg"
+FOLDERS="_astro images projects"
+# archive/ is deliberately not listed: the live /archive/ is the old
+# freelance site, and the repo only has a placeholder for it.
+EXCLUDE="*.psd"
