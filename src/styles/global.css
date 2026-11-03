@@ -1,5 +1,5 @@
-/* Orange Halo Design System Tokens */
-@import '@orange-halo/tokens/css';
+/* Orange Halo Design System tokens, Orange Halo brand */
+@import '@orange-halo/tokens/brands/orange-halo.css';
 
 /* Base styles */
 *,
@@ -9,11 +9,11 @@
 }
 
 html {
-  font-family: var(--oh-font-family-sans, system-ui, -apple-system, sans-serif);
-  font-size: var(--oh-font-size-base, 16px);
+  font-family: var(--oh-typography-body-font-family);
+  font-size: var(--oh-typography-body-base-font-size);
   line-height: var(--oh-typography-body-base-line-height);
-  color: var(--oh-color-text-primary, #1a1a1a);
-  background-color: var(--oh-color-surface-base, #FAF7F2);
+  color: var(--oh-color-text-primary);
+  background-color: var(--oh-color-surface-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -43,15 +43,17 @@ body {
 
 /* Selection styles */
 ::selection {
-  background-color: var(--oh-color-brand-primary, #C54300);
-  color: white;
+  background-color: var(--oh-color-brand-primary);
+  color: var(--oh-color-text-on-brand);
 }
 
 /* ═══════════════════════════════════════════════════════════════
    Typography Utilities (from Design System)
    ═══════════════════════════════════════════════════════════════ */
 
-/* Lead text - for impactful intro paragraphs */
+/* Lead text - for impactful intro paragraphs.
+   OHDS has no tier 2 lead style yet, so this still uses tier 1 tokens:
+   a candidate to move into the design system. */
 .oh-lead {
   font-size: var(--oh-font-size-2xl);
   font-weight: var(--oh-font-weight-medium);
@@ -63,17 +65,17 @@ body {
 
 /* Body text variants */
 .oh-body {
-  font-size: var(--oh-font-size-base);
-  font-weight: var(--oh-font-weight-normal);
-  line-height: var(--oh-font-line-height-normal);
+  font-size: var(--oh-typography-body-base-font-size);
+  font-weight: var(--oh-typography-body-base-font-weight);
+  line-height: var(--oh-typography-body-base-line-height);
   color: var(--oh-color-text-secondary);
   max-width: 65ch;
   margin: 0 0 var(--oh-spacing-4);
 }
 
 .oh-body-lg {
-  font-size: var(--oh-font-size-lg);
-  line-height: var(--oh-font-line-height-relaxed);
+  font-size: var(--oh-typography-body-lg-font-size);
+  line-height: var(--oh-typography-body-lg-line-height);
   color: var(--oh-color-text-secondary);
   max-width: 65ch;
   margin: 0 0 var(--oh-spacing-4);
@@ -101,9 +103,9 @@ body {
 
 /* Section heading (h2) */
 .oh-section-heading {
-  font-size: var(--oh-font-size-2xl);
-  font-weight: var(--oh-font-weight-semibold);
-  line-height: var(--oh-font-line-height-snug);
+  font-size: var(--oh-typography-heading-h3-font-size);
+  font-weight: var(--oh-typography-heading-h3-font-weight);
+  line-height: var(--oh-typography-heading-h3-line-height);
   color: var(--oh-color-text-primary);
   margin: var(--oh-spacing-8) 0 var(--oh-spacing-6);
 }
@@ -114,9 +116,9 @@ body {
 
 /* Subsection heading (h3) */
 .oh-subsection-heading {
-  font-size: var(--oh-font-size-xl);
-  font-weight: var(--oh-font-weight-semibold);
-  line-height: var(--oh-font-line-height-snug);
+  font-size: var(--oh-typography-heading-h4-font-size);
+  font-weight: var(--oh-typography-heading-h4-font-weight);
+  line-height: var(--oh-typography-heading-h4-line-height);
   color: var(--oh-color-text-primary);
   margin: 0 0 var(--oh-spacing-4);
 }
@@ -135,7 +137,7 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: var(--oh-radius-md);
+  border-radius: var(--oh-shape-container);
   margin-bottom: var(--oh-spacing-4);
 }
 
@@ -154,7 +156,7 @@ article + article {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: var(--oh-radius-md);
+  border-radius: var(--oh-shape-container);
   background-color: var(--oh-color-surface-inset);
   aspect-ratio: 4 / 3;
   object-fit: cover;
