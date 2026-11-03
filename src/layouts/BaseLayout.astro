@@ -19,8 +19,10 @@ const currentPath = Astro.url.pathname;
     <title>{title} | Orange Halo</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script>
-      // Load Web Components client-side
+      // Load Web Components client-side: the core components, then the
+      // Orange Halo brand's patterns (<oh-hero>, <oh-footer>)
       import '@orange-halo/components';
+      import '@orange-halo/brand-orange-halo';
     </script>
   </head>
   <body>

@@ -5,3 +5,7 @@ dist/
 .env.*
 !.env.example
 *.psd
+
+# macOS metadata (Finder, and ._ files on the external drive)
+.DS_Store
+._*
