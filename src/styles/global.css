@@ -52,12 +52,13 @@ body {
    ═══════════════════════════════════════════════════════════════ */
 
 /* Lead text - for impactful intro paragraphs.
-   OHDS has no tier 2 lead style yet, so this still uses tier 1 tokens:
-   a candidate to move into the design system. */
+   OHDS has no lead role yet, so this borrows heading 3's size and line
+   height as a pair, which keeps it on the grid: a candidate to move into
+   the design system. */
 .oh-lead {
-  font-size: var(--oh-font-size-2xl);
+  font-size: var(--oh-typography-heading-h3-font-size);
   font-weight: var(--oh-font-weight-medium);
-  line-height: var(--oh-font-line-height-snug);
+  line-height: var(--oh-typography-heading-h3-line-height);
   color: var(--oh-color-text-primary);
   max-width: 65ch;
   margin: 0 0 var(--oh-spacing-6);
@@ -125,7 +126,8 @@ body {
 
 /* Footer column heading */
 .oh-footer-heading {
-  font-size: var(--oh-font-size-sm);
+  font-size: var(--oh-typography-label-sm-font-size);
+  line-height: var(--oh-typography-label-sm-line-height);
   font-weight: var(--oh-font-weight-semibold);
   text-transform: uppercase;
   letter-spacing: 0.05em;
