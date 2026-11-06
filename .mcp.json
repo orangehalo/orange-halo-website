@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ohds": {
+      "command": "node",
+      "args": ["../orange-halo/packages/mcp/server.mjs"]
+    }
+  }
+}
