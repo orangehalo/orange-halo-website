@@ -9,9 +9,9 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@orange-halo/brand-orange-halo": "^1.0.0",
-    "@orange-halo/components": "^2.2.0",
-    "@orange-halo/tokens": "^2.2.0",
+    "@orange-halo/brand-orange-halo": "^2.0.0",
+    "@orange-halo/components": "^3.0.0",
+    "@orange-halo/tokens": "^3.0.0",
     "astro": "^4.16.0"
   }
 }
