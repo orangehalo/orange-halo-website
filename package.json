@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@orange-halo/brand-orange-halo": "^2.0.0",
-    "@orange-halo/components": "^3.0.0",
-    "@orange-halo/tokens": "^3.0.0",
+    "@orange-halo/components": "^3.10.0",
+    "@orange-halo/tokens": "^3.6.0",
     "astro": "^4.16.0"
   }
 }
