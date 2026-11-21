@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="description" content="A design demo of a pension payment journey built with the Orange Halo Design System. Not a real provider." />
+    <title>Pay in a lump sum – Harbourline Pensions (design demo)</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Orange Halo Design System: tokens (light, and dark under data-theme="dark") -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@orange-halo/tokens@4.2.0/dist/brands/orange-halo.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@orange-halo/tokens@4.2.0/dist/brands/orange-halo-dark.css" />
+    <!-- The brand's fonts (the tokens name them but don't load them) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/bricolage-grotesque@5.1.0/latin-400.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/bricolage-grotesque@5.1.0/latin-500.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/bricolage-grotesque@5.1.0/latin-600.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/bricolage-grotesque@5.1.0/latin-700.css" />
+    <link rel="stylesheet" href="journey.css" />
+
+    <!--
+      One copy of each OHDS element. oh-hero's CDN build imports its own
+      oh-progress from components 4.0.0, which would define oh-progress a
+      second time after the components bundle (4.3.0) has; point that
+      import at an empty module, since the bundle already defines it
+      (see the gap log).
+    -->
+    <script type="importmap">
+      {
+        "imports": {
+          "https://cdn.jsdelivr.net/npm/@orange-halo/components@4.0.0/oh-progress.js/+esm": "./vendor-shim.js"
+        }
+      }
+    </script>
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <noscript>
+      <p class="noscript">
+        This demo needs JavaScript: the Orange Halo Design System's components are web components.
+        Harbourline Pensions isn't a real provider and no payments are taken.
+      </p>
+    </noscript>
+    <div id="app"></div>
+  </body>
+</html>

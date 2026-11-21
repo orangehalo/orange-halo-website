@@ -1,0 +1,7 @@
+# Single Pension Contribution design demo: keep every file in this folder
+# out of search engines. A header as well as the page's robots meta tag, so
+# scripts and styles are covered too. Don't add a robots.txt Disallow for
+# this path: crawlers that can't fetch a page never see its noindex.
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow, noarchive"
+</IfModule>

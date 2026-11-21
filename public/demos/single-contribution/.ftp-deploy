@@ -1,0 +1,7 @@
+# Deploy settings for the ftp-deploy skill: run it from this folder to
+# upload the demo on its own. No secrets here.
+PROFILE=orange-halo
+REMOTE_FOLDER=demos/single-contribution
+FILES=""
+FOLDERS="."
+EXCLUDE=".ftp-deploy"
